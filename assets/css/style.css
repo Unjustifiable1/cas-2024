@@ -812,10 +812,10 @@ main {
 .project-card :is(.card-title, .publish-date) {
   background: var(--bg-primary);
   padding: 6px 12px;
-  width: max-content;
+  width: 100%;
   box-shadow: var(--shadow-1);
   transform: translateY(20px);
-  opacity: 0;
+  /* opacity: 0; */
   transition: var(--transition-1);
 }
 
@@ -826,7 +826,15 @@ main {
 }
 
 .project-card:is(:hover, :focus) :is(.card-title, .publish-date) {
-  transform: translateY(0);
+  transform: translateY(0px);
+  /* opacity: 1; */
+}
+
+.project-card :is(.publish-date) {
+  opacity: 0;
+}
+
+.project-card:is(:hover, :focus) :is(.publish-date) {
   opacity: 1;
 }
 
