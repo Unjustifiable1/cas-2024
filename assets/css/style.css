@@ -355,10 +355,21 @@ body.active {
   gap: 8px;
 }
 
-.logo img {
-  height: var(--fs-1);
-  aspect-ratio: 1;
+.header .logo {
+  img {
+    height: 26px;
+  }
 }
+
+.footer .logo {
+  img {
+    height: 80px;
+  }
+}
+
+/* .logo img {
+  aspect-ratio: 1;
+} */
 
 .logo a {
   color: var(--color-primary);
@@ -1249,6 +1260,12 @@ textarea.input-field {
 
   .header.active {
     padding-block: 15px;
+  }
+
+  .header .logo {
+    img {
+      height: 47px;
+    }
   }
 
   .navbar-actions {
