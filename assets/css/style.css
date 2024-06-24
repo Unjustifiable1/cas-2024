@@ -20,10 +20,19 @@
    * colors
    */
 
-  --clr-brand-1: hsl(178, 93%, 28%);
-  --clr-brand-2: hsl(178, 97%, 40%);
+  --african-violet: #a792c1ff;
+  --celadon: #acd09dff;
+  --vanilla: #ebe6a2ff;
+  --powder-blue: #a2c8e8ff;
+  --charcoal: #3f4d59ff;
+
+  --clr-brand-1: #a792c1ff;
+  --clr-brand-2: #acd09dff;
+  --clr-brand-3: #ebe6a2ff;
+  --clr-brand-4: #a2c8e8ff;
   --clr-yellow: hsl(51, 95%, 54%);
   --clr-black: hsl(0, 0%, 0%);
+  --clr-grey: #3f4d59ff;
   --clr-white: hsl(0, 0%, 100%);
 
   /**
@@ -94,7 +103,7 @@ body.dark_theme {
 
 body.light_theme {
 
-  --bg-primary: hsl(0, 0%, 90%);
+  --bg-primary: hsl(0, 0%, 100%);
   --bg-secondary: hsl(0, 0%, 100%);
   --color-primary: hsl(0, 0%, 12%);
   --color-secondary: hsl(0, 0%, 37%);
@@ -253,8 +262,9 @@ body.active {
 }
 
 .btn-primary:is(:hover, :focus) {
-  background: var(--color-primary);
-  color: var(--bg-primary);
+  background: var(--clr-brand-4);
+  border-color: var(--clr-brand-4);
+  color: var(--clr-black);
 }
 
 .btn-secondary {
@@ -264,7 +274,7 @@ body.active {
 }
 
 .btn-secondary:is(:hover, :focus) {
-  --clr-brand-1: hsl(24, 74%, 64%);
+  --clr-brand-1: var(--clr-brand-3);
 }
 
 .section-subtitle {
@@ -299,7 +309,7 @@ body.active {
 .tooltip {
   position: absolute;
   top: -40px;
-  background: var(--clr-brand-1);
+  background: var(--clr-brand-2);
   min-width: max-content;
   color: var(--clr-white);
   font-size: 15px;
@@ -535,7 +545,9 @@ body.active {
 \*-----------------------------------*/
 
 main {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  /* width: 100dvw; */
+  overflow: hidden;
 }
 
 .hero {
@@ -553,9 +565,12 @@ main {
   width: 125%;
   margin-bottom: 30px;
 
-  picture {
-    filter: brightness(90%);
-  }
+  background-image: url("/assets/images/bg-home.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 :is(.hero-social-list, .scroll-down) {
@@ -1001,9 +1016,19 @@ textarea.input-field {
 .contact .btn-primary {
   max-width: unset;
   width: 100%;
-  background: var(--color-primary);
-  color: var(--bg-primary);
 }
+
+
+
+/*-----------------------------------*\
+ * #CTA
+\*-----------------------------------*/
+
+.cta {
+  padding-block: var(--section-padding);
+}
+
+
 
 
 
