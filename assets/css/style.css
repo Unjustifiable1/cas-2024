@@ -63,9 +63,13 @@
   /**
    * spacing
    */
-
+  --btn-padding: 10px 25px;
   --content-padding: 24px;
   --section-padding: 80px;
+  --gap10: 10px;
+  --gap20: 20px;
+  --gap30: 30px;
+  --gap50: 50px;
 
   /**
    * radius
@@ -252,10 +256,11 @@ body.active {
   font-weight: var(--fw-700);
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  padding: 10px 25px;
+  padding: var(--btn-padding);
   border: 1px solid transparent;
   border-radius: var(--radius-4);
   transition: var(--transition-1);
+  white-space: nowrap;
 }
 
 .btn-primary {
@@ -325,6 +330,31 @@ body.active {
   z-index: 1;
 }
 
+.bg-clr-b1 {
+  background-color: var(--clr-brand-1);
+}
+
+.bg-clr-b2 {
+  background-color: var(--clr-brand-2);
+}
+
+.bg-clr-b3 {
+  background-color: var(--clr-brand-3);
+}
+
+.bg-clr-b4 {
+  background-color: var(--clr-brand-4);
+}
+
+.bg-br-4 {
+  border-radius: var(--radius-4);
+}
+
+.bg-br-12 {
+  border-radius: var(--radius-12);
+}
+
+
 
 
 
@@ -354,7 +384,7 @@ body.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: var(--gap10);
 }
 
 .logo {
@@ -370,12 +400,6 @@ body.active {
 .header .logo {
   img {
     height: 26px;
-  }
-}
-
-.footer .logo {
-  img {
-    height: 80px;
   }
 }
 
@@ -397,7 +421,7 @@ body.active {
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: var(--gap20);
   margin-left: auto;
 }
 
@@ -547,8 +571,6 @@ body.active {
 \*-----------------------------------*/
 
 main {
-  /* overflow-x: hidden; */
-  /* width: 100dvw; */
   overflow: hidden;
 }
 
@@ -558,11 +580,14 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 115px;
+  padding-top: 50px;
   margin-bottom: var(--section-padding);
+  position: relative;
 }
 
 .hero-banner {
+  position: absolute;
+  top: 50px;
   max-width: 500px;
   width: 125%;
   margin-bottom: 30px;
@@ -580,9 +605,16 @@ main {
 }
 
 .hero-content {
-  max-width: 450px;
-  background-color: var(--clr-brand-1);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 650px;
   padding: var(--content-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: var(--gap20);
 }
 
 .hero-title {
@@ -590,9 +622,6 @@ main {
   margin-bottom: 30px;
 }
 
-.hero .btn-primary {
-  margin-inline: auto;
-}
 
 
 
@@ -608,14 +637,14 @@ main {
 
 .stats-list {
   display: grid;
-  gap: 30px;
+  gap: var(--gap30);
 }
 
 .stats-card {
   background: var(--bg-secondary);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--gap10);
   padding: 25px;
   border-radius: var(--radius-12);
   box-shadow: var(--shadow-1);
@@ -1051,6 +1080,10 @@ textarea.input-field {
 
 .footer .logo {
   margin-bottom: 15px;
+
+  img {
+    height: 80px;
+  }
 }
 
 .copyright {
@@ -1193,7 +1226,7 @@ textarea.input-field {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+    gap: var(--gap20);
   }
 
   .about .btn {
@@ -1243,6 +1276,7 @@ textarea.input-field {
      * spacing
      */
 
+    --content-padding: 50px;
     --section-padding: 100px;
 
   }
@@ -1326,7 +1360,7 @@ textarea.input-field {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: var(--gap20);
   }
 
   .navbar-link::before {
@@ -1422,6 +1456,7 @@ textarea.input-field {
     text-transform: uppercase;
     transform: rotate(90deg);
     transform-origin: top right;
+    padding: var(--btn-padding);
   }
 
   .scroll-down::after {
@@ -1459,7 +1494,7 @@ textarea.input-field {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 30px;
+    gap: var(--gap30);
   }
 
   .about-banner {
@@ -1477,7 +1512,7 @@ textarea.input-field {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 50px;
+    gap: var(--gap50);
   }
 
   .skills-content {
@@ -1513,7 +1548,7 @@ textarea.input-field {
   .contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: var(--gap30);
   }
 
   .contact-content {
