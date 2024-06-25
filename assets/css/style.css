@@ -85,6 +85,7 @@
 
 
 
+
 /*-----------------------------------*\
  * #THEME COLORS
 \*-----------------------------------*/
@@ -97,6 +98,10 @@ body.dark_theme {
   --color-secondary: hsl(0, 0%, 62%);
   --card-shadow: hsla(0, 0%, 0%, 0.4);
   --input-bg: hsl(0, 0%, 16%);
+
+  /**
+   * shadows
+   */
 
   --shadow-1: 10px 10px 40px var(--card-shadow);
   --shadow-2:
@@ -115,6 +120,10 @@ body.light_theme {
   --color-secondary: hsl(0, 0%, 37%);
   --card-shadow: hsla(0, 0%, 0%, 0.1);
   --input-bg: hsl(0, 0%, 93%);
+
+  /**
+   * shadows
+   */
 
   --shadow-1: 10px 10px 40px var(--card-shadow);
   --shadow-2:
@@ -262,6 +271,14 @@ body.active {
   border-radius: var(--radius-4);
   transition: var(--transition-1);
   white-space: nowrap;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--gap20);
 }
 
 .btn-primary {
@@ -581,14 +598,14 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 30px;
   margin-bottom: var(--section-padding);
   position: relative;
 }
 
 .hero-banner {
   position: absolute;
-  top: 50px;
+  top: 30px;
   max-width: 500px;
   width: 125%;
   margin-bottom: 30px;
@@ -606,6 +623,7 @@ main {
 }
 
 .hero-content {
+  --color-primary: var(--clr-white);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -620,7 +638,14 @@ main {
 
 .hero-title {
   text-align: center;
-  margin-bottom: 30px;
+  /* margin-bottom: 15px; */
+}
+
+.hero-text {
+  --color-primary: --clr-black;
+  font-size: var(--fs-4);
+  line-height: 1.4;
+  /* margin-bottom: 15px; */
 }
 
 
@@ -1223,13 +1248,6 @@ textarea.input-field {
    * ABOUT
    */
 
-  .btn-group {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: var(--gap20);
-  }
-
   .about .btn {
     max-width: max-content;
   }
@@ -1393,16 +1411,15 @@ textarea.input-field {
   }
 
   .hero-content {
-    --color-primary: var(--clr-white);
-
+    gap: var(--gap30);
     position: absolute;
     top: 50%;
     filter: drop-shadow(2px 4px 10px var(--clr-black));
   }
 
-  /* .hero .btn-primary:is(:hover, :focus) {
-    color: hsl(0, 0%, 12%);
-  } */
+  .hero-text {
+    line-height: 1.8;
+  }
 
   .hero-social-list {
     display: block;
