@@ -105,10 +105,10 @@ body.dark_theme {
 
   --shadow-1: 10px 10px 40px var(--card-shadow);
   --shadow-2:
-    0 0 4px var(--clr-black),
-    0 0 10px var(--clr-black),
-    0 0 20px var(--clr-black),
-    0 0 80px var(--clr-black);
+    0 0 4px var(--card-shadow),
+    0 0 10px var(--card-shadow),
+    0 0 20px var(--card-shadow),
+    0 0 80px var(--card-shadow);
 
 }
 
@@ -127,10 +127,10 @@ body.light_theme {
 
   --shadow-1: 10px 10px 40px var(--card-shadow);
   --shadow-2:
-    0 0 4px var(--clr-black),
-    0 0 10px var(--clr-black),
-    0 0 20px var(--clr-black),
-    0 0 80px var(--clr-black);
+    0 0 4px var(--card-shadow),
+    0 0 10px var(--card-shadow),
+    0 0 20px var(--card-shadow),
+    0 0 80px var(--card-shadow);
 
 }
 
@@ -332,7 +332,6 @@ body.active {
 
 .tooltip {
   position: absolute;
-  top: -40px;
   background: var(--clr-brand-2);
   min-width: max-content;
   color: var(--clr-white);
@@ -664,6 +663,15 @@ main {
 .stats-list {
   display: grid;
   gap: var(--gap30);
+  margin-bottom: var(--gap30);
+}
+
+.stats-list-B {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.trust-item {
+  display: none;
 }
 
 .stats-card {
@@ -671,14 +679,38 @@ main {
   display: flex;
   align-items: center;
   gap: var(--gap10);
-  padding: 25px;
   border-radius: var(--radius-12);
   box-shadow: var(--shadow-1);
   transition: var(--transition-1);
+  position: relative;
+}
+
+.stats-list-A .stats-card {
+  padding: 25px;
+}
+
+.stats-list-B .stats-card {
+  padding: 5px;
 }
 
 .stats-card:is(:hover, :focus) {
   transform: translateY(-5px);
+}
+
+.stats-card .tooltip {
+  bottom: 20px;
+
+}
+
+.hero-social-link .tooltip,
+.contact-social-link .tooltip {
+  top: -40px;
+}
+
+.stats-card:is(:hover, :focus) .tooltip {
+  transform: translateY(0);
+  opacity: 1;
+  /* top: unset; */
 }
 
 .stats-card .card-icon {
@@ -711,6 +743,11 @@ main {
 
 .stats-card>ion-icon {
   color: var(--color-secondary);
+}
+
+.stats-card>img {
+  max-width: 20vw;
+  margin-inline: auto;
 }
 
 
@@ -1238,8 +1275,40 @@ textarea.input-field {
    * STATS
    */
 
-  .stats-list {
+  .stats-list-A {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .trust-item {
+    display: block;
+  }
+
+  .stats-list-B {
+    display: none;
+  }
+
+  .stats-grid-item1 {
+    order: 1;
+  }
+
+  .stats-grid-item2 {
+    order: 2;
+  }
+
+  .stats-grid-item3 {
+    order: 3;
+  }
+
+  .stats-grid-item4 {
+    order: 4;
+  }
+
+  .stats-grid-item5 {
+    order: 5;
+  }
+
+  .stats-grid-item6 {
+    order: 6;
   }
 
 
@@ -1501,6 +1570,29 @@ textarea.input-field {
     height: 100%;
   }
 
+  .stats-grid-item1 {
+    order: unset;
+  }
+
+  .stats-grid-item2 {
+    order: unset;
+  }
+
+  .stats-grid-item3 {
+    order: unset;
+  }
+
+  .stats-grid-item4 {
+    order: unset;
+  }
+
+  .stats-grid-item5 {
+    order: unset;
+  }
+
+  .stats-grid-item6 {
+    order: unset;
+  }
 
 
 
