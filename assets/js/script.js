@@ -109,7 +109,7 @@ if (localStorage.getItem("theme") === "light_theme") {
 // form submission handler - Home Page Contact Section Form
 
 window.addEventListener("load", function () {
-  const form1 = document.getElementById('form-portfolioJC');
+  const form1 = document.getElementById('form-home-cas1');
   form1.addEventListener("submit", function (e) {
     e.preventDefault();
     const data = new FormData(form1);

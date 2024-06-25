@@ -67,6 +67,7 @@
   --content-padding: 24px;
   --section-padding: 80px;
   --gap10: 10px;
+  --gap15: 15px;
   --gap20: 20px;
   --gap30: 30px;
   --gap50: 50px;
@@ -280,7 +281,7 @@ body.active {
 }
 
 .btn-secondary:is(:hover, :focus) {
-  --clr-brand-1: var(--clr-brand-3);
+  --clr-brand-4: var(--clr-brand-3);
 }
 
 .section-subtitle {
@@ -787,7 +788,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: var(--gap15);
   animation: fadeIn 0.5s ease-out forwards;
 }
 
@@ -921,14 +922,14 @@ main {
 }
 
 .contact-content {
-  margin-bottom: 50px;
+  margin-bottom: var(--gap50);
 }
 
 .contact-list-item {
   display: flex;
   align-items: flex-start;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: var(--gap15);
+  margin-bottom: var(--gap20);
 }
 
 .contact-item-icon {
@@ -941,7 +942,7 @@ main {
 }
 
 .contact-item-title {
-  margin-bottom: 10px;
+  margin-bottom: var(--gap10);
 }
 
 .contact-list-item .contact-info {
@@ -960,7 +961,7 @@ main {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  gap: 15px;
+  gap: var(--gap15);
   padding-inline: 40px;
 }
 
@@ -1399,9 +1400,9 @@ textarea.input-field {
     filter: drop-shadow(2px 4px 10px var(--clr-black));
   }
 
-  .hero .btn-primary:is(:hover, :focus) {
+  /* .hero .btn-primary:is(:hover, :focus) {
     color: hsl(0, 0%, 12%);
-  }
+  } */
 
   .hero-social-list {
     display: block;
