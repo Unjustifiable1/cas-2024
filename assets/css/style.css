@@ -1217,6 +1217,12 @@ textarea.input-field {
   margin: var(--section-padding) 0;
 } */
 
+.section-text ion-icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+
 
 
 
