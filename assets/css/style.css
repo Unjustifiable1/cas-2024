@@ -301,6 +301,10 @@ body.active {
   --clr-brand-4: var(--clr-brand-3);
 }
 
+.section {
+  margin: var(--section-padding) 0;
+}
+
 .section-subtitle {
   position: relative;
   color: var(--color-secondary);
@@ -345,6 +349,12 @@ body.active {
   pointer-events: none;
   transition: var(--transition-1);
   z-index: 1;
+}
+
+.bg-box {
+  padding-top: var(--gap50);
+  padding-bottom: var(--gap50);
+  box-shadow: var(--shadow-1);
 }
 
 .bg-clr-b1 {
@@ -563,6 +573,14 @@ body.active {
   transition-delay: 0.5s;
 }
 
+.navbar.active .btn-secondary {
+  width: 70vw;
+  height: fit-content;
+  white-space: wrap;
+  font-size: var(--fs-4);
+  text-align: center;
+}
+
 .navbar-link::before {
   content: "";
   position: absolute;
@@ -655,10 +673,6 @@ main {
 /*-----------------------------------*\
  * #STATS
 \*-----------------------------------*/
-
-.stats {
-  padding-block: var(--section-padding);
-}
 
 .stats-list {
   display: grid;
@@ -758,10 +772,6 @@ main {
  * #ABOUT
 \*-----------------------------------*/
 
-.about {
-  padding-block: var(--section-padding);
-}
-
 .about-banner {
   max-width: 400px;
   margin-inline: auto;
@@ -788,15 +798,6 @@ main {
 /*-----------------------------------*\
  * #TESTIMONIALS
 \*-----------------------------------*/
-#testimonials {
-  padding-top: var(--gap50);
-  padding-bottom: var(--gap50);
-  box-shadow: var(--shadow-1);
-}
-
-#testimonials * {
-  border: 1px solid red;
-}
 
 /* Slideshow container */
 .slideshow-container {
@@ -829,7 +830,7 @@ main {
 
 .testimonial-text {
   font-size: var(--fs-5);
-  height: 7rem;
+  height: 13rem;
 }
 
 .testimonial-client {
@@ -883,10 +884,6 @@ main {
 /*-----------------------------------*\
  * #SKILLS
 \*-----------------------------------*/
-
-.skills {
-  padding-block: var(--section-padding);
-}
 
 .skills-content {
   margin-bottom: 50px;
@@ -986,10 +983,6 @@ main {
  * #PROJECT
 \*-----------------------------------*/
 
-.project {
-  padding-block: var(--section-padding);
-}
-
 .project-list>li {
   margin-bottom: 25px;
 }
@@ -1073,10 +1066,6 @@ main {
 /*-----------------------------------*\
  * #CONTACT
 \*-----------------------------------*/
-
-.contact {
-  padding-block: var(--section-padding);
-}
 
 .contact-content {
   margin-bottom: var(--gap50);
@@ -1215,9 +1204,9 @@ textarea.input-field {
  * #CTA
 \*-----------------------------------*/
 
-.cta {
-  padding-block: var(--section-padding);
-}
+/* .cta {
+  margin: var(--section-padding) 0;
+} */
 
 
 
@@ -1325,6 +1314,16 @@ textarea.input-field {
     max-width: 380px;
   }
 
+
+
+  /**
+   * TESTIMONIALS
+   */
+
+
+  .testimonial-text {
+    height: 9rem;
+  }
 
 
   /**
@@ -1706,6 +1705,17 @@ textarea.input-field {
     margin-bottom: 0;
   }
 
+
+
+
+
+  /**
+   * TESTIMONIALS
+   */
+
+  .testimonial-text {
+    height: 7rem;
+  }
 
 
 
