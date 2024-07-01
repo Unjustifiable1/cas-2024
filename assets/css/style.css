@@ -786,6 +786,10 @@ main {
   column-span: all;
 }
 
+.about-list>li:first-child .section-title {
+  padding-top: var(--gap50);
+}
+
 .about-list>li {
   margin-bottom: 25px;
 }
@@ -799,6 +803,55 @@ main {
   margin-bottom: 10px;
 }
 
+
+
+
+
+
+/*-----------------------------------*\
+ * #BENEFITS
+\*-----------------------------------*/
+
+.benefits-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--gap15);
+  overflow: hidden;
+  margin-bottom: var(--gap20);
+}
+
+.benefits-card {
+  text-align: center;
+
+  * {
+    margin-inline: auto;
+  }
+}
+
+#benefits>.btn-group {
+  --clr-brand-3: var(--clr-brand-1);
+}
+
+
+
+
+/*-----------------------------------*\
+ * #RELIANCE
+\*-----------------------------------*/
+
+.reliance-container {
+  background-color: #ffffff51;
+  padding: var(--gap10);
+  margin-bottom: var(--gap20);
+}
+
+.reliance-item {
+  list-style-type: circle;
+  line-height: 1.2;
+  margin: 8px 8px 8px 24px;
+}
 
 
 
@@ -1033,7 +1086,7 @@ main {
   padding: 6px 12px;
   width: 100%;
   box-shadow: var(--shadow-1);
-  transform: translateY(20px);
+  transform: translateY(50px);
   /* opacity: 0; */
   transition: var(--transition-1);
 }
@@ -1058,7 +1111,7 @@ main {
 }
 
 .project-card:is(:hover, :focus) .publish-date {
-  transition-delay: 0.1s;
+  transition-delay: 0.25s;
 }
 
 .load-more {
@@ -1495,8 +1548,8 @@ textarea.input-field {
 
   .section-subtitle {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 8px;
+    left: 2px;
     transform: rotate(0.75turn) translateX(-100%);
     transform-origin: left top;
     margin-bottom: 0;
@@ -1712,7 +1765,7 @@ textarea.input-field {
   .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: start;
     gap: var(--gap30);
   }
 
