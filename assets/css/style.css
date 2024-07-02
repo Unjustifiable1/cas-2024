@@ -1196,7 +1196,7 @@ main {
 }
 
 .contact-form {
-  background: var(--bg-secondary);
+  background: var(--clr-brand-3);
   padding: 20px;
   border-radius: var(--radius-12);
   box-shadow: var(--shadow-1);
