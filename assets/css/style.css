@@ -277,7 +277,7 @@ body.active {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--gap20);
 }
 
@@ -814,10 +814,9 @@ main {
 
 .benefits-list {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: var(--gap15);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap10);
   overflow: hidden;
   margin-bottom: var(--gap20);
 }
