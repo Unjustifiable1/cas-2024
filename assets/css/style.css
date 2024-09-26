@@ -626,7 +626,7 @@ main {
   width: 125%;
   margin-bottom: 30px;
 
-  background-image: url("/assets/images/bg-home.jpg");
+  background-image: url("/assets/images/hero1.png");
   min-height: 100dvh;
   background-attachment: fixed;
   background-position: center;
@@ -1381,6 +1381,7 @@ textarea.input-field {
     max-width: 380px;
   }
 
+
   /**
    * TESTIMONIALS
    */
@@ -1428,6 +1429,18 @@ textarea.input-field {
 
   .section-title {
     max-width: 420px;
+  }
+
+
+
+
+
+  /**
+   * HERO
+   */
+
+  .hero-banner {
+    background-image: url("/assets/images/hero2.png");
   }
 
 
@@ -1632,6 +1645,7 @@ textarea.input-field {
     max-width: unset;
     height: 100%;
     margin-bottom: 0;
+    background-image: url("/assets/images/hero3.png");
   }
 
   .hero img {
