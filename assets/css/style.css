@@ -1265,9 +1265,10 @@ textarea.input-field {
  * #CTA
 \*-----------------------------------*/
 
-/* .cta {
-  margin: var(--section-padding) 0;
-} */
+#ctaImage {
+  width: 90%;
+  margin: 20px auto;
+}
 
 .section-text ion-icon {
   display: inline-block;
