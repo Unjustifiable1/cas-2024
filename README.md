@@ -3,7 +3,7 @@
   <br />
   <br />
   
-  <img src="./assets/images/cas_logo.png" />
+  <img src="./assets/images/cas_logo.svg" />
 
   <h2 align="center">Cupido Accounting Services | Website Redesign</h2>
 
