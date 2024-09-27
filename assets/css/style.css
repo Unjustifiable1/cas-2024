@@ -626,7 +626,7 @@ main {
   width: 125%;
   margin-bottom: 30px;
 
-  background-image: url("/assets/images/hero1.png");
+  background-image: url("../images/hero1.png");
   min-height: 100dvh;
   background-attachment: fixed;
   background-position: center;
@@ -1440,7 +1440,7 @@ textarea.input-field {
    */
 
   .hero-banner {
-    background-image: url("/assets/images/hero2.png");
+    background-image: url("../images/hero2.png");
   }
 
 
@@ -1645,7 +1645,7 @@ textarea.input-field {
     max-width: unset;
     height: 100%;
     margin-bottom: 0;
-    background-image: url("/assets/images/hero3.png");
+    background-image: url("../images/hero3.png");
   }
 
   .hero img {
